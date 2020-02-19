@@ -13,6 +13,7 @@ jobs:
 
     steps:
     #build Node
+    - uses: actions/checkout@master
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
