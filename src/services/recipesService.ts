@@ -22,8 +22,11 @@ const rawRecipesToRecipes = pipe(
   map<RawRecipe[], Recipe>(rawRecipes => {
     const id = rawRecipes[0].recipe_id
     const name = rawRecipes[0].recipe_name
-    const duration = rawRecipes[0].recipe_duration
+    const cooking_time = rawRecipes[0].recipe_cooking_time
+    const preparation_time = rawRecipes[0].recipe_preparation_time
+    const nb_people = rawRecipes[0].recipe_nb_people
     const description = rawRecipes[0].recipe_description
+    const creation_date = rawRecipes[0].recipe_creation_date
     const steps = uniqBy(['id'], rawRecipes.map<Step>(rawRecipe => ({
       id: rawRecipe.step_id,
       description: rawRecipe.step_description,
@@ -36,7 +39,7 @@ const rawRecipesToRecipes = pipe(
       unit: rawRecipe.ingredient_unit
     })))
 
-    return { id, name, duration, steps, ingredients, description }
+    return { id, name, cooking_time, preparation_time, nb_people, creation_date, steps, ingredients, description }
   })
 )
 

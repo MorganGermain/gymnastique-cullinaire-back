@@ -22,10 +22,10 @@ values ('Abricot'),
        ('Yaourt'),
        ('Zuccata');
 
-insert into recipe (name, description, duration, nb_people, update_time)
-values ('Pizza Fruitée', 'Une pizza aux fruits', 15, 1, now()),
-       ('Mixture étrange', 'Un mélange surprenant qui fait fondre le palais (littéralement)', 5, 4, now()),
-       ('Sandwich du futur', 'Une sandwich qui ne sera sans doute pas commercialisé avec quelques années', 10, 1, now());
+insert into recipe (name, description, preparation_time, cooking_time, nb_people, creation_date)
+values ('Pizza Fruitée', 'Une pizza aux fruits', 15, 10, 1, now()),
+       ('Mixture étrange', 'Un mélange surprenant qui fait fondre le palais (littéralement)', 5, 0, 4, now()),
+       ('Sandwich du futur', 'Une sandwich qui ne sera sans doute pas commercialisé avec quelques années', 10, 0, 1, now());
 
 insert into recipe_has_ingredient (id_recipe, id_ingredient, quantity, unit)
 values (1, 14, 1, ' '),

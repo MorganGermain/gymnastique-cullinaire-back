@@ -11,7 +11,7 @@ export const generatePdfFromRecipes = (recipes: Recipe[]) =>
       }
       doc.fontSize(30).text(recipe.name)
       doc.fontSize(16).text(recipe.description)
-      doc.text(`Durée : ${recipe.duration} minutes`)
+      doc.text(`Durée : ${recipe.cooking_time + recipe.preparation_time} minutes`)
       doc.text(' ')
       doc.fontSize(18).text(`Ingrédients : `)
       recipe.ingredients.forEach((ingredient) => {

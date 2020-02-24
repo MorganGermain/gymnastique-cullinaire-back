@@ -5,12 +5,14 @@ const baseQuery = `
   SELECT
     recipe.id recipe_id,
     recipe.name recipe_name,
-    recipe.description description,
+    recipe.description recipe_description,
+    recipe.preparation_time recipe_preparation_time,
+    recipe.cooking_time recipe_cooking_time,
+    recipe.nb_people recipe_nb_people,
     ingredient.id ingredient_id,
     recipe_has_ingredient.unit ingredient_unit,
     ingredient.name ingredient_name,
     recipe_has_ingredient.quantity ingredient_quantity,
-    recipe.duration recipe_duration,
     step.id step_id,
     step.step_order step_order,
     step.description step_description

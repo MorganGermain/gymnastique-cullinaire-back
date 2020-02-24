@@ -10,8 +10,9 @@ create table if not exists recipe
   id int auto_increment not null primary key,
   name        varchar(255) charset utf8mb4 null,
   description varchar(255) charset utf8mb4 null,
-  duration     int          null,
-  update_time  date         null,
+  cooking_time int          null,
+  preparation_time int          null,
+  creation_date  date         null,
   nb_people    int          null
 );
 

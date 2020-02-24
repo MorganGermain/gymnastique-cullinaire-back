@@ -6,8 +6,8 @@ export default (() => {
   connection = createMysqlConnection({
     insecureAuth : true,
     host     : 'localhost',
-    user     : 'dev',
-    password : 'password',
+    user     : 'root',
+    password : '',
     database : 'recipe'
   });
  
